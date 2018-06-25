@@ -1,0 +1,460 @@
+/* NOTE FOR MY FOLLOWERS ON GITHUB: THE FONTS ARE NOT INCLUDE IN THE PROJECT! */
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url("../fonts/Raleway-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: Nunito-Regular;
+    src: url("../fonts/Nunito-Regular.ttf");
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunito-Light.ttf");
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url("../fonts/Pacifico-Regular.ttf");
+}
+
+@keyframes animWritePost {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes animPositionTopOverlayContainer {
+    0% {margin-top: -600px;}
+    75% {margin-top: 100px;}
+    100% {margin-bottom: 0px;}
+}
+
+@keyframes animBackgroundOverlayBlur {
+    from {background-color: rgba(0,0,0,0);}
+    to {background-color: rgba(0,0,0,0.6);}
+}
+
+@keyframes animPositionColumnShow {
+    0% {display: none; opacity: 0;}
+    100% {display: block; opacity: 1;}
+}
+
+@keyframes animLoadingBlueBlock {
+    0% {transform: rotateY(0deg);opacity: 0.4;}
+    100% {transform: rotateY(180deg);opacity: 1;}
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', 'OpenSans', sans-serif;
+    color: #666666;
+    z-index: 100;
+    box-sizing: border-box;
+    //outline: 1px solid red;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	/*border-radius: 10px;*/
+	background-color: #DDD;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: #666;
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #666;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+    color: #33b5e5;
+}
+
+h1 {
+    color: #505050;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+h2 {
+    color: #505050;
+    font-size: 18px;
+    font-weight: lighter;
+    vertical-align: middle;
+}
+
+h3 {
+    color: #505050;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+#top_help {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100px;
+    background-color: #FFF;
+    z-index: 1500;
+    padding: 10px 25px 10px 10px;
+    font-size: 12px;
+    //border-bottom: 1px solid #AAA;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: right;
+}
+
+#top_help .top_help_close {
+    position: absolute;
+    right: 25px;
+    top: 70px;
+    width: 450px;
+    font-size: 14px;
+}
+
+#top_help #top_help_disp {
+    margin-left: 45px;
+}
+
+#top_help #info_icon {
+    position: fixed;
+    top: 0;
+    right: 440px;
+    width: 25px;
+    margin: 10px;
+}
+
+.error {
+    padding: 14px 10px 14px 20px;
+    font-size: 14px;
+    border-left: 2px solid #e74c3c;
+    color: #888;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.success {
+    padding: 7px;
+    font-size: 12px;
+    border-left: 1px solid #2ecc71;
+    width: 100%;
+}
+
+.info {
+    padding: 7px;
+    font-size: 12px;
+    border-left: 1px solid #3498db;
+    width: 100%;
+}
+
+label {
+    float: left;
+    font-size: 12px;
+    color: #999;
+    margin-left: 15px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 90%;
+    background-color: #FFF;
+    text-align: left;
+    font-size: 13px;
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0px 4px 10px 4px;
+    margin-bottom: 15px;
+    transition: all 200ms linear;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    border-bottom: 1px solid #AAA;
+}
+
+input[type=submit] {
+    width: 125px;
+    background-color: #3498db; /*#8870FF*/
+    color: #FFF;
+    border: none;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+}
+
+input:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+#loading_icon {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFF;
+    z-index: 14000;
+    opacity: 0.8;
+    cursor: wait;
+}
+
+#loading_icon #toolong {
+    margin-top: 25px;
+    position: absolute;
+    top: 300px;
+    margin-top: 20px;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    text-align: center;
+}
+
+#loading_icon #loading_info {
+    margin-top: 25px;
+    position: absolute;
+    top: 300px;
+    margin-top: 50px;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    text-align: center;
+    font-family: 'Pacifico';
+    font-size: 17px;
+}
+
+#loading_icon #loading_blue_block {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    margin-left: -20px;
+    background-color: #27aae1;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    animation-name: animLoadingBlueBlock;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.intro_middle_jumbo {
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.badge {
+    color: #FFF;
+    background-color: #99bb2e;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 7px 14px 7px 14px;
+    margin: 5px;
+}
+
+#about_team {
+    width: 100%;
+}
+
+#about_team td {
+    width: 50%;
+    line-height: 40px;
+    font-size: 20px;
+    vertical-align: text-top;
+}
+
+#about_team tr td:first-child {
+    text-align: right;
+    padding-right: 10px;
+}
+
+#about_team tr td:last-child {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.dual_screen_presentation img {
+    border-radius: 15px;
+}
+
+.sec_title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 80px;
+}
+
+.pull_left {
+    float: left;
+}
+
+.pull_right {
+    float: right;
+}
+
+
+#overlay_container_blur {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 700;
+    animation-name: animBackgroundOverlayBlur;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#overlay_container {
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    top: 70px;
+    width: 600px;
+    background-color: #FFF;
+    border-radius: 7px;
+    z-index: 800;
+    text-align: center;
+    padding: 0px 20px 20px 20px;
+    animation-name: animPositionTopOverlayContainer;
+    animation-duration: 1s;
+}
+
+#overlay_container_close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 800;
+}
+
+#overlay_container_close a {
+    color: #FFF;
+    font-size: 30px;
+}
+
+.columnShow1 {
+    animation-name: animPositionColumnShow;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.columnShow2 {
+    animation-name: animPositionColumnShow;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.columnShow3 {
+    animation-name: animPositionColumnShow;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.columnShow4 {
+    animation-name: animPositionColumnShow;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.columnShow5 {
+    animation-name: animPositionColumnShow;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.page_title {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.small_indic {
+    font-size: 12px;
+    color: #666;
+}
+
+.middle-avatar {
+    width: 150px;
+}
+
+.errorLink {
+    font-size: 14px;
+    color: #e74c3c;
+}
+
+.dangerLink {
+    font-size: 14px;
+    color: #ff7979;
+}
+
+.btn {
+    border: none;
+    /*padding: 10px 25px 10px 25px;*/
+    border-radius: 18px;
+    color: #ffffff;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.btn-submit {
+    background-color: #4834d4;
+    color: #d9d9d9;
+}
+
+.btn-reset {
+    background-color: #f8f8f8;
+    border: 1px solid #8c8c8c;
+    color: #8c8c8c;
+}
+
+.btn-info {
+    background-color: #2196f3;
+    color: #d9d9d9;
+}
+
+.btn-danger {
+    background-color: #eb4d4b;
+    color: #fad5d5;
+}
+
+.btn-success {
+    background-color: #8bc34a;
+    color: #d5e9bd;
+}
+
+.btn-warning {
+    background-color: #ffbe76;
+    color: #FFF;
+}
+
+.emojis {
+    width: 18px;
+    vertical-align: middle;
+    margin: 0px 3px 5px 3px;
+}

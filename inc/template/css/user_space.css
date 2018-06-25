@@ -1,0 +1,989 @@
+@keyframes animBackgroundTopCover {
+    from {background-position: top center;}
+    to {background-position: center center;}
+}
+
+* {
+    font-family: 'Nunito';
+    z-index: 100;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #FBFBFB;
+}
+
+input[type=text], input[type=password], textarea {
+    width: 100%;
+    border: 1px solid #DDD;
+    padding: 7px 15px 7px 15px;
+    border-radius: 3px;
+}
+
+select {
+    border: 1px solid #DDD;
+    padding: 7px 15px 7px 15px;
+    border-radius: 3px;
+}
+
+#top_logo::first-letter {
+    font-size: 18px;
+}
+
+#top_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    font-family: 'Pacifico';
+    //color: #FFF;
+    //background-color: rgb(47, 172, 255);
+    color: #666;
+    padding: 16px 15px 14px 60px;
+    font-size: 18px;
+    z-index: 1700;
+}
+
+#topMessageiconLink {
+    position: absolute;
+    top: 24px;
+    left: 695px;
+    z-index: 1700;
+}
+
+#topNotificationiconLink {
+    position: absolute;
+    top: 24px;
+    left: 735px;
+    z-index: 1700;
+}
+
+#topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    border-bottom: 1px solid #F1F4F5;
+    background-color: #FFF;
+    z-index: 1000;
+    border-top: 3px solid rgb(47, 172, 255);
+}
+
+#topbar #search {
+    position: absolute;
+    top: 14px;
+    right: 90px;
+}
+
+#topbar #search input[type=text] {
+    background-color: #FFFw;
+    border: 1px solid #CCC;
+    width: 250px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 20px;
+    font-size: 13px;
+    transition: all 250ms linear;
+}
+
+#topbar #search input[type=text]:focus {
+    width: 300px;
+    border-bottom: 1px solid #AAA;
+}
+
+#topbar #search button {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: rgba(0,0,0,0);
+    width: 20px;
+    height: 20px;
+    line-height: 30px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+#topbar #small_avatar_me {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
+}
+
+#topbar #links {
+    position: absolute;
+    top: 0;
+    left: 160px;
+    height: 60px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+#topbar #links a {
+    color: #888;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 13px;
+}
+
+#topbar #links .active {
+    color: #444;
+    font-size: 14px;
+}
+
+#subtopbar {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding-left: 80px;
+    padding-top: 10px;
+    height: 40px;
+    background-color: #FFF;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.04);
+    z-index: 900;
+}
+
+#subtopbar a {
+    color: #888;
+    text-decoration: none;
+    padding: 8px 25px 7px 25px;
+    font-size: 14px;
+}
+
+#subtopbar .active {
+    color: #444;
+    border-bottom: 2px solid rgb(37, 162, 245);
+}
+
+#subtopbar i {
+    font-size: 12px;
+}
+
+#search_panel {
+    position: fixed;
+    top: 60px;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: #FFF;
+    z-index: 900;
+    transition: all 350ms linear;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+}
+
+#left_sidebar #left_menu {
+    position: absolute;
+    top: 95px;
+    min-height: 100vh;
+    height: 1400px;
+    left: 0;
+    border-radius: 4px;
+    width: 280px;
+    padding: 15px;
+    z-index: 850;
+    background-color: #FDFDFD;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+#left_sidebar #left_menu #interfaceTopCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 90px;
+    background-size: cover;
+    filter: grayscale(80%);
+}
+
+#left_sidebar #left_menu  #small_avatar_me {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+}
+
+#left_sidebar #left_menu  #name {
+    position: absolute;
+    top: 20px;
+    left: 55px;
+    width: 200px;
+    font-size: 16px;
+    padding: 0px 15px 0px 20px;
+}
+
+#left_sidebar #left_menu  #username {
+    position: absolute;
+    top: 45px;
+    left: 75px;
+    width: 200px;
+    font-size: 13px;
+}
+
+#left_sidebar #left_menu  #name a, #left_sidebar #left_menu  #username a {
+    color: #757575;
+}
+
+#left_sidebar #left_menu  #links {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    left: 0;
+}
+
+#left_sidebar #left_menu  #links a {
+    line-height: 35px;
+    color: #757575;
+    font-size: 14px;
+}
+
+#left_sidebar #left_menu #links table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#left_sidebar #left_menu #links table tr:hover {
+    background-color: #EEE;
+}
+
+#left_sidebar #left_menu #links table tr td:first-child {
+    width: 60px;
+}
+
+#left_sidebar #left_menu #links table tr td:first-child img {
+    vertical-align: middle;
+    width: 22px;
+    margin-left: 30px;
+    margin-right: 15px;
+}
+
+#left_sidebar #bubles_preview {
+    position: absolute;
+    top: 270px;
+    left: 20px;
+    width: 240px;
+    font-size: 14px;
+}
+
+#left_sidebar #bubles_preview .dash_buble_preview {
+    line-height: 30px;
+    color: #FFF;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 30px;
+    margin: 5px;
+    font-family: 'Pacifico';
+}
+
+#left_sidebar #skyscraper_pub {
+    position: absolute;
+    top: 770px;
+    left: 60px;
+    width: 160px;
+    height: 600px;
+    font-size: 24px;
+    background-color: #CCC;
+    word-spacing: 150px;
+    text-align: center;
+    padding-top: 100px;
+    line-height: 40px;
+}
+
+#page_content {
+    position: absolute;
+    top: 95px;
+    left: 400px;
+    width: 700px;
+    border-radius: 4px;
+    background-color: #FEFEFE;
+    padding: 5px 15px 15px 15px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+#interfaceSettingsListA li a {
+    color: #888;
+    font-size: 14px;
+    padding: 20px;
+}
+
+#interfaceSettingsListA li i {
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+#interfaceSettingsTable {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+#interfaceSettingsTable td {
+    vertical-align: top;
+}
+
+#interfaceSettingsTable tr td:first-child {
+    width: 180px;
+    text-align: right;
+    padding-right: 30px;
+}
+
+#interfaceSettingsTable tr td:nth-child(2) {
+    padding-top: 10px;
+    width: 350px;
+}
+
+#interfaceSettingsTable tr td:last-child {
+    text-align: center;
+    width: 150px;
+}
+
+#interfaceSettingsTable tr td:first-child span, #interfaceSettingsTable tr td:first-child p  {
+    font-size: 14px;
+    color: #888;
+    line-height: 20px;
+}
+
+#interfaceSettingsTable input[type=text], #interfaceSettingsTable input[type=password], #interfaceSettingsTable textarea {
+    width: 100%;
+    border: 1px solid #DDD;
+    padding: 7px 15px 7px 15px;
+    border-radius: 3px;
+}
+
+#interfaceSettingsTable textarea {
+    resize: none;
+    padding: 7px;
+    border: 1px solid #DDD;
+}
+
+#interfaceSettingsTable input[type=submit] {
+    border-radius: 7px;
+    background-color: #1fccef;
+    font-size: 14px;
+}
+
+.table-confidential-settings {
+    width: 100%;
+}
+
+.settings-select {
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    width: 70%;
+}
+
+#create_buble {
+    margin-top: 20px;
+}
+
+.page_information {
+    padding: 20px 40px 20px 5px;
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+.small-rounded-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    color: #FFF;
+}
+
+#profile-new-post {
+    margin-top: 5px;
+}
+
+#profile-new-post input[type=submit] {
+    background-color: #1CB1E2;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.button-icon {
+    background-color: #FFF;
+    border: none;
+}
+
+.icon {
+    width: 25px;
+    vertical-align: middle;
+}
+
+#page_content_mails {
+    position: absolute;
+    top: 100px;
+    left: 325px;
+    width: 900px;
+    background-color: #FFF;
+    padding: 5px 5px 15px 5px;
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.3);
+}
+
+#listConvMessages {
+    margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#listConvMessages tr {
+    line-height: 40px;
+    font-size: 15px;
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+}
+
+#listConvMessages tr:first-child {
+    border-top: 1px solid #DDD;
+}
+
+#listConvMessages .active {
+    background-color: #F8F8F8;
+    border-left: 2px solid #46BCEB;
+}
+
+#listConvMessages tr .avatar {
+    width: 45px;
+    padding-left: 10px;
+}
+
+#listConvMessages tr .avatar .pic {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+}
+
+#listConvMessages tr .name{
+    overflow: hidden;
+    color: #888;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+#listConvMessages tr .title {
+    font-size: 12px;
+    color: #AAA;
+    text-align: left;
+    width: 400px;
+}
+
+#listConvMessages tr .date {
+    text-align: right;
+    padding-right: 20px;
+}
+
+#listConvMessages tr:hover {
+    background-color: #EFEFEF;
+}
+
+.mailView .title {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.mailView .message {
+    font-size: 16px;
+}
+
+.mailView img {
+    max-width: 400px;
+}
+
+.msg-option img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.msg-option {
+    color: #666666;
+}
+
+.mailView .answer-btn {
+    color: #FFF;
+    background-color: #3498db;
+    padding: 4px 25px 4px 25px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.badge_count {
+    color: #FFF;
+    border-radius: 5px;
+    padding: 4px 7px 4px 7px;
+    background-color: #3498db;
+    font-size: 12px;
+}
+
+#container_store {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1500;
+    background-color: #FFF;
+}
+
+#page_content_store {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    right: 40px;
+    z-index: 1600;
+}
+
+#page_content_store .menu {
+    margin-top: 30px;
+}
+
+#page_content_store .menu a {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+#page_content_store .app-preview {
+    height: 115px;
+    width: 115px;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 25px;
+    margin-left: 30px;
+    transition: all 150ms linear;
+}
+
+#page_content_store .app-preview:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    border: 5px solid #FFF;
+}
+
+#page_content_store .app-preview:active {
+    opacity: 0.5;
+}
+
+#page_content_store .app-preview span {
+    opacity: 0;
+    color: #888;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+    font-size: 15px;
+    line-height: 60px;
+    font-family: "Pacifico";
+}
+
+#page_content_store .app-preview:hover span {
+    opacity: 1;
+}
+
+#page_content_store .section {
+    color: #777;
+    font-size: 25px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+#emojisList {
+    width: 100%;
+}
+
+#emojisList tr td {
+    line-height: 35px;
+    font-size: 18px;
+}
+
+.buble_color_circle {
+    line-height: 50px;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 50px;
+    font-family: 'Pacifico';
+    text-align: center;
+    padding-right: 5px;
+}
+
+.small_circle_avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.post-title a {
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #777;
+}
+
+.post-plus a {
+    color: #777;
+    font-family: 'Nunito';
+}
+
+.post-plus img {
+    margin-top: 5px;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.post-plus .badge_count {
+    margin-left: 15px;
+}
+
+.post {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    border-top: 1px solid #EEE;
+}
+
+.post-box-shadow {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+}
+
+.post-content::first-letter {
+    margin-left: 150px;
+}
+
+.post-comment {
+    background-color: transparent;
+    position: absolute;
+    left: 180px;
+    top: 42px;
+    color: #888;
+}
+
+.del-btn {
+    background-color: rgba(234, 32, 39, 0.822);
+    width: 105px;
+    font-size: 12px;
+    color: #FFF;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#profile_content {
+    position: absolute;
+    top: 95px;
+    left: 325px;
+    width: 950px;
+    border-radius: 4px;
+    background-color: #FEFEFE;
+    padding: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+#profile_content .profile {
+    margin-top: 7px;
+}
+
+#profile_content .profile-pic {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    transition: all 250ms linear;
+}
+
+#profile_content .profile-pic:hover {
+    transform: scale(1.15);
+    background-size: 250px auto;
+}
+
+#profile_content .name {
+    font-size: 30px;
+    line-height: 40px;
+    margin-left: 10px;
+    color: #444444;
+    font-family: 'Nunito';
+}
+
+#profile_content .location_gender {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #777;
+    font-family: 'Nunito';
+}
+
+#profile_content .location_gender img {
+    margin-right: 5px;
+}
+
+#profile_content .username {
+    font-size: 15px;
+    margin-left: 10px;
+    line-height: 30px;
+    color: #888;
+}
+
+#profile_content .contact {
+    font-size: 14px;
+    margin-top: 25px;
+    line-height: 40px;
+    color: #888;
+    padding: 10px;
+    width: 180px;
+    margin-left: 32px;
+}
+
+#profile_content .contact img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+#profile_content .gallery {
+    font-size: 15px;
+    margin-left: 15px;
+    line-height: 50px;
+}
+
+#profile_content .gallery button {
+    background-color: #46BCEB;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 7px;
+    width: 180px;
+}
+
+#profile_content .gallery i {
+    font-size: 14px;
+    color: #FFF;
+}
+
+#profile_content .last-online {
+    font-size: 15px;
+    line-height: 50px;
+    color: #888;
+    margin-left: 15px;
+}
+
+#profile_content .biography {
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 15px;
+    color: #999;
+    padding-right: 10px;
+    line-height: 22px;
+}
+
+#profile_content .profile_title {
+    color: #666;
+    font-size: 20px;
+}
+
+#profile_content .add_buble img {
+    margin-top: 5px;
+    vertical-align: middle;
+}
+
+#profile_content .add_buble select {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 170px;
+}
+
+#profile_content .posts {
+    margin-top: 25px;
+}
+
+#page_content_write_post {
+    position: absolute;
+    top: 40px;
+    left: 20%;
+    width: 60%;
+    background-color: #FFF;
+    padding: 25px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    z-index: 2000;
+    opacity: 0;
+    animation-name: animWritePost;
+    animation-fill-mode: forwards;
+    animation-duration: 1.7s;
+}
+
+#page_content_write_post .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2500;
+}
+
+div > .post-plus {
+    background-color: #F8F8F8;
+    padding: 7px 20px 7px 20px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+
+.post-plus img {
+    width: 15px;
+}
+
+.post-plus .badge_count {
+    background-color: #BBB;
+    color: #FFF;
+}
+
+#page_content_gallery {
+    position: absolute;
+    top: 95px;
+    left: 325px;
+    width: 950px;
+    border-radius: 4px;
+    background-color: #FEFEFE;
+    padding: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.gallery-thumb {
+    height: 180px;
+    background-color: #EEE;
+    background-position: center center;
+    background-size: cover;
+    transition: all 150ms linear;
+    padding-top: 115px;
+    text-align: center;
+    color: #FFF;
+    z-index: 1000;
+    border-radius: 2px;
+    animation-name: animPositionColumnShow;
+    animation-duration: 0.01s;
+}
+
+.gallery-thumb-effect p {
+    display: none;
+    visibility: hidden;
+    line-height: 18px;
+    text-align: justify;
+    transition: all 250ms linear;
+}
+
+.gallery-thumb-effect:hover {
+    transform: scale(1.05);
+    filter: grayscale(10%);
+    color: #666;
+    z-index: 1500;
+}
+
+.gallery-thumb-effect:hover > p {
+    background-color: #FFF;
+    padding: 7px;
+    color: #888;
+    font-size: 12px;
+    font-family: "Roboto";
+    border-radius: 7px;
+    visibility: visible;
+    display: block;
+}
+
+.gallery-add {
+    background-image: url('../icons/svg/cloud-computing-2.svg');
+    background-size: 50px 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #666;
+    font-family: "Roboto";
+    font-weight: light;
+}
+
+.gallery-more {
+    background-image: url('../icons/svg/more.svg');
+    background-size: 50px 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #666;
+    font-family: "Roboto";
+    font-weight: light;
+}
+
+#gallery-add-picture input[type=submit] {
+    background-color: #46BCEB;
+    padding: 4px 15px 4px 15px;
+    width: 170px;
+    border-radius: 7px;
+}
+
+#profile_content .gallery {
+    font-size: 15px;
+    margin-left: 15px;
+    line-height: 50px;
+}
+
+#profile_content .gallery button {
+    background-color: #46BCEB;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 7px;
+    width: 180px;
+    margin-left: 20px;
+}
+
+.gallery-edit-link, .gallery-del-link {
+    padding: 7px 10px 7px 10px;
+    border-radius: 7px 14px 7px 14px;
+    font-size: 12px;
+}
+
+.gallery-edit-link {
+    background-color: #46BCEB;
+    color: #FFF;
+}
+
+.gallery-del-link {
+    background-color: #d8334a;
+    color: #FFF;
+}
+
+#profile_content .profile-preview-gallery .col {
+    padding: 5%;
+}
+
+#profile_content .profile-preview-gallery .col:first-child {
+    margin-top: 20px;
+}
+
+#profile_content .profile-preview-gallery img {
+    max-width: 90%;
+    border-radius: 7px 4px 7px 4px;
+    opacity: 0.9;
+}
+
+#profile_content img {
+    animation-name: animPositionColumnShow;
+    animation-duration: 2s;
+}
+
+#comment_panel {
+    position: fixed;
+    top: 60px;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: #FFF;
+    z-index: 900;
+    transition: all 350ms linear;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+}

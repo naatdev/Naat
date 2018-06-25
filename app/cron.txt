@@ -1,0 +1,2 @@
+@daily root find '/var/www/html/naat/media/pictures/profile_pics/*' -mtime +1 -type f -delete
+*       *       *       *       *       find '/var/www/html/naat/media/pictures/profile_pics/' -mmin +1 -type f -delete
